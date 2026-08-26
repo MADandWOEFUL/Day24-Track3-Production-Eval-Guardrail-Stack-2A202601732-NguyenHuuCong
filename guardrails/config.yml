@@ -2,6 +2,9 @@ models:
   - type: main
     engine: openai
     model: gpt-4o-mini
+  - type: embeddings
+    engine: openai
+    model: text-embedding-3-small
 
 instructions:
   - type: general

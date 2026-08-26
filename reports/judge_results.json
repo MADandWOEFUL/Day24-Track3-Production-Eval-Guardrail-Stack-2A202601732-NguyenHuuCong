@@ -1,0 +1,138 @@
+{
+  "cohen_kappa": 0.1667,
+  "agreement_count": 6,
+  "total_human_samples": 10,
+  "bias_report": {
+    "total_judged": 3,
+    "position_bias_rate": 0.0,
+    "position_bias_count": 0,
+    "verbosity_bias": 1.0,
+    "verbosity_details": {
+      "a_wins_a_longer": 3,
+      "b_wins_b_longer": 0,
+      "total_decisive": 3
+    },
+    "interpretation": "Position bias thấp — judge ổn định."
+  },
+  "human_vs_judge": [
+    {
+      "question_id": 1,
+      "question": "Nhân viên được nghỉ bao nhiêu ngày khi kết hôn?",
+      "model_answer": "Nhân viên được nghỉ 3 ngày làm việc có lương khi kết hôn.",
+      "human_label": 1,
+      "judge_label": 1,
+      "match": true,
+      "human_note": "Chính xác và đầy đủ."
+    },
+    {
+      "question_id": 5,
+      "question": "Muốn mua thiết bị trị giá 55 triệu cần ai phê duyệt?",
+      "model_answer": "Cần Giám đốc phòng ban phê duyệt.",
+      "human_label": 0,
+      "judge_label": 1,
+      "match": false,
+      "human_note": "Sai — 55 triệu vượt ngưỡng 50 triệu nên phải CEO phê duyệt, không phải Director."
+    },
+    {
+      "question_id": 12,
+      "question": "Thưởng Tết tối thiểu cho nhân viên chính thức có từ 6 tháng trở lên là bao nhiêu?",
+      "model_answer": "Nhân viên được thưởng Tết tối thiểu 1 tháng lương.",
+      "human_label": 1,
+      "judge_label": 1,
+      "match": true,
+      "human_note": "Đúng và súc tích."
+    },
+    {
+      "question_id": 21,
+      "question": "Một nhân viên Senior có 9 năm thâm niên được nghỉ bao nhiêu ngày phép năm và lương trong khoảng nào?",
+      "model_answer": "Được nghỉ 18 ngày phép (15 cơ bản + 3 thâm niên). Lương Senior từ 20 đến 35 triệu.",
+      "human_label": 1,
+      "judge_label": 1,
+      "match": true,
+      "human_note": "Tính đúng, bao gồm cả phép và lương."
+    },
+    {
+      "question_id": 23,
+      "question": "Nhân viên được tài trợ khóa học 25 triệu, nghỉ việc sau 8 tháng. Phải hoàn trả bao nhiêu?",
+      "model_answer": "Hoàn trả 25 triệu vì chưa đủ 1 năm cam kết.",
+      "human_label": 1,
+      "judge_label": 0,
+      "match": false,
+      "human_note": "Đúng — 100% hoàn trả vì nghỉ trước 12 tháng."
+    },
+    {
+      "question_id": 29,
+      "question": "Nhân viên tạm ứng 8 triệu, chưa thanh toán sau 30 ngày. Ai phê duyệt và phí phạt là bao nhiêu?",
+      "model_answer": "Trưởng phòng phê duyệt. Phạt 2% tháng trên 8 triệu.",
+      "human_label": 0,
+      "judge_label": 1,
+      "match": false,
+      "human_note": "Thiếu — 8 triệu cần cả Kế toán trưởng. Phạt phải tính pro-rata cho 15 ngày quá hạn = 80.000 VNĐ."
+    },
+    {
+      "question_id": 33,
+      "question": "Nhân viên Manager có thâm niên 12 năm: tổng phụ cấp hàng tháng và số ngày phép năm?",
+      "model_answer": "Phép: 19 ngày. Phụ cấp: 1.500.000 VNĐ/tháng.",
+      "human_label": 1,
+      "judge_label": 0,
+      "match": false,
+      "human_note": "Tính đúng cả hai."
+    },
+    {
+      "question_id": 41,
+      "question": "Nhân viên được nghỉ bao nhiêu ngày phép năm?",
+      "model_answer": "Nhân viên được nghỉ 12 ngày phép năm.",
+      "human_label": 0,
+      "judge_label": 0,
+      "match": true,
+      "human_note": "Sai — trả lời theo v2023 đã hết hiệu lực. v2024 hiện hành là 15 ngày."
+    },
+    {
+      "question_id": 46,
+      "question": "Nhân viên thử việc có được nghỉ phép năm không?",
+      "model_answer": "Nhân viên thử việc không được nghỉ phép năm và phải xin nghỉ không lương nếu cần.",
+      "human_label": 1,
+      "judge_label": 1,
+      "match": true,
+      "human_note": "Đúng hoàn toàn, bao gồm hành động thay thế."
+    },
+    {
+      "question_id": 50,
+      "question": "Nhân viên Manager có thể dùng VPN cá nhân (NordVPN) khi WFH không?",
+      "model_answer": "Được, miễn là đảm bảo kết nối an toàn.",
+      "human_label": 0,
+      "judge_label": 0,
+      "match": true,
+      "human_note": "Sai — VPN cá nhân bị cấm theo chính sách VPN v1.3. Phải dùng VPN WireGuard của công ty."
+    }
+  ],
+  "pairwise_samples": [
+    {
+      "question": "Nhân viên được nghỉ bao nhiêu ngày phép năm?",
+      "winner_pass1": "A",
+      "winner_pass2": "A",
+      "final_winner": "A",
+      "position_consistent": true,
+      "reasoning_pass1": "Answer A cung cấp thông tin chính xác và đầy đủ hơn về số ngày phép và nêu rõ năm áp dụng, trong khi Answer B không đúng số ngày phép.",
+      "reasoning_pass2": "Câu trả lời B cung cấp thông tin chính xác và cập nhật hơn (15 ngày phép theo chính sách v2024), trong khi câu A đưa ra thông tin cũ và ít chính xác."
+    },
+    {
+      "question": "Bao lâu phải đổi mật khẩu một lần?",
+      "winner_pass1": "A",
+      "winner_pass2": "A",
+      "final_winner": "A",
+      "position_consistent": true,
+      "reasoning_pass1": "Câu trả lời A đưa ra thông tin chính xác theo chính sách hiện hành về thời gian đổi mật khẩu, trong khi câu trả lời B đưa ra thông tin sai lệch.",
+      "reasoning_pass2": "Answer B cung cấp thông tin chính xác hơn theo chính sách hiện hành, trong khi Answer A chỉ đưa ra quy định chung cũ hơn."
+    },
+    {
+      "question": "VPN có bắt buộc khi làm việc từ xa không?",
+      "winner_pass1": "A",
+      "winner_pass2": "A",
+      "final_winner": "A",
+      "position_consistent": true,
+      "reasoning_pass1": "Answer A chính xác hơn vì nó đề cập đến quy định công ty về việc sử dụng VPN, trong khi Answer B không đầy đủ trong bối cảnh doanh nghiệp cần có chính sách cụ thể.",
+      "reasoning_pass2": "Answer B cung cấp thông tin chính xác về yêu cầu VPN theo quy định của công ty, trong khi Answer A không đưa ra tiêu chí rõ ràng và có thể gây nhầm lẫn."
+    }
+  ]
+}

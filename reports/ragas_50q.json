@@ -1,0 +1,138 @@
+{
+  "total_questions": 50,
+  "per_distribution": {
+    "factual": {
+      "count": 20,
+      "faithfulness": 0.9333333333333333,
+      "answer_relevancy": 0.8008874492589433,
+      "context_precision": 0.9749999999445833,
+      "context_recall": 0.85,
+      "avg_score": 0.8898051956342149
+    },
+    "multi_hop": {
+      "count": 20,
+      "faithfulness": 0.48070512820512823,
+      "answer_relevancy": 0.5769194799277011,
+      "context_precision": 0.9916666666270834,
+      "context_recall": 0.8041666666666666,
+      "avg_score": 0.7133644853566448
+    },
+    "adversarial": {
+      "count": 10,
+      "faithfulness": 0.8,
+      "answer_relevancy": 0.6238604587270826,
+      "context_precision": 0.9416666666262501,
+      "context_recall": 0.65,
+      "avg_score": 0.7538817813383332
+    }
+  },
+  "failure_clusters": {
+    "matrix": {
+      "faithfulness": {
+        "factual": 2,
+        "multi_hop": 13,
+        "adversarial": 2
+      },
+      "context_recall": {
+        "factual": 4,
+        "multi_hop": 2,
+        "adversarial": 5
+      },
+      "context_precision": {
+        "factual": 1,
+        "multi_hop": 0,
+        "adversarial": 1
+      },
+      "answer_relevancy": {
+        "factual": 13,
+        "multi_hop": 5,
+        "adversarial": 2
+      }
+    },
+    "dominant_failure_distribution": "factual",
+    "dominant_failure_metric": "answer_relevancy",
+    "insight": "Distribution 'factual' có nhiều failure nhất. Metric 'answer_relevancy' là điểm yếu chủ đạo. Gợi ý: Improve prompt template"
+  },
+  "bottom_10": [
+    {
+      "rank": 1,
+      "question_id": 39,
+      "distribution": "multi_hop",
+      "question": "So sánh yêu cầu mật khẩu giữa policy v1.0 và v2.0 về độ dài tối thiểu, thời hạn đổi và MFA.",
+      "avg_score": 0.375,
+      "worst_metric": "faithfulness"
+    },
+    {
+      "rank": 2,
+      "question_id": 44,
+      "distribution": "adversarial",
+      "question": "Bao lâu phải đổi mật khẩu một lần?",
+      "avg_score": 0.375,
+      "worst_metric": "faithfulness"
+    },
+    {
+      "rank": 3,
+      "question_id": 7,
+      "distribution": "factual",
+      "question": "Nghỉ phép không lương 20 ngày cần ai phê duyệt?",
+      "avg_score": 0.375,
+      "worst_metric": "faithfulness"
+    },
+    {
+      "rank": 4,
+      "question_id": 30,
+      "distribution": "multi_hop",
+      "question": "So sánh quyền lợi bảo hiểm giữa nhân viên thử việc và nhân viên chính thức.",
+      "avg_score": 0.375,
+      "worst_metric": "faithfulness"
+    },
+    {
+      "rank": 5,
+      "question_id": 33,
+      "distribution": "multi_hop",
+      "question": "Nhân viên Manager có thâm niên 12 năm: tổng phụ cấp hàng tháng và số ngày phép năm theo v2024 là bao nhiêu?",
+      "avg_score": 0.375,
+      "worst_metric": "faithfulness"
+    },
+    {
+      "rank": 6,
+      "question_id": 50,
+      "distribution": "adversarial",
+      "question": "Nhân viên Manager có thể dùng VPN cá nhân (như NordVPN) khi WFH để tăng bảo mật thêm không?",
+      "avg_score": 0.4167,
+      "worst_metric": "faithfulness"
+    },
+    {
+      "rank": 7,
+      "question_id": 25,
+      "distribution": "multi_hop",
+      "question": "Lương thử việc của nhân viên Junior mức cao nhất là bao nhiêu?",
+      "avg_score": 0.5,
+      "worst_metric": "faithfulness"
+    },
+    {
+      "rank": 8,
+      "question_id": 21,
+      "distribution": "multi_hop",
+      "question": "Một nhân viên Senior có 9 năm thâm niên được nghỉ bao nhiêu ngày phép năm và lương trong khoảng nào?",
+      "avg_score": 0.5625,
+      "worst_metric": "answer_relevancy"
+    },
+    {
+      "rank": 9,
+      "question_id": 22,
+      "distribution": "multi_hop",
+      "question": "Nếu cần mua một chiếc laptop 30 triệu cho nhân viên mới, ai phê duyệt và cần gì từ phòng CNTT?",
+      "avg_score": 0.5975,
+      "worst_metric": "faithfulness"
+    },
+    {
+      "rank": 10,
+      "question_id": 48,
+      "distribution": "adversarial",
+      "question": "Nhân viên thử việc có được hưởng bảo hiểm sức khỏe PVI không?",
+      "avg_score": 0.6667,
+      "worst_metric": "answer_relevancy"
+    }
+  ]
+}
